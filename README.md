@@ -12,4 +12,4 @@
 
 # 效果图
 
-<img src="screenshot/1.GIF" width="300/>
+<img src="screenshot/1.GIF" width="300"/>
