@@ -17,7 +17,7 @@ class CardCell: UICollectionViewCell {
         img.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
         img.image = UIImage(named: "1")
         
-        self.layer.shadowColor = UIColor.orange.cgColor
+        self.layer.shadowColor = UIColor.blue.cgColor
         self.layer.shadowOpacity = 0.4
         self.layer.shadowOffset = CGSize(width: 0, height: 2)
         self.layer.shadowRadius = 4

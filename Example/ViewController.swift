@@ -16,9 +16,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = UIColor.orange
         cbv = CardBannerView(datas: [Any](), itemW: sw * 62 / 75, itemH: sw * 33 / 75, LineSpacing: sw * 8 / 750, cellClass: CardCell.self, delegate: self, iscycles: true, istransform: true)
-        cbv.frame = CGRect(x: 0, y: 0, width: sw, height: sw * 398 / 750)
+        cbv.frame = CGRect(x: 0, y: 100, width: sw, height: sw * 398 / 750)
         self.view.addSubview(cbv)
         cbv.setDatas(datas: imgnames)
         
