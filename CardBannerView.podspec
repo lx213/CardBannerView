@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = 'CardBannerView'
-    s.version      = '0.0.2'
+    s.version      = '0.0.3'
     s.summary      = 'a cardview on iOS'
     s.homepage     = 'https://github.com/lx213/CardBannerView'
     s.license      = 'MIT'
