@@ -14,6 +14,8 @@
 		3C7484C52062422A0076288A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C7484C32062422A0076288A /* LaunchScreen.storyboard */; };
 		3C7484CE206242F10076288A /* CardBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7484CD206242F10076288A /* CardBannerView.swift */; };
 		3C7484D02062447C0076288A /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7484CF2062447C0076288A /* CardCell.swift */; };
+		3C81832B2064D25C0083AC80 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C81832A2064D25C0083AC80 /* MainViewController.swift */; };
+		3C81832D2064D5DF0083AC80 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C81832C2064D5DF0083AC80 /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		3C7484C62062422A0076288A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C7484CD206242F10076288A /* CardBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardBannerView.swift; sourceTree = "<group>"; };
 		3C7484CF2062447C0076288A /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		3C81832A2064D25C0083AC80 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3C81832C2064D5DF0083AC80 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,11 +73,13 @@
 			children = (
 				3C7484BA2062422A0076288A /* AppDelegate.swift */,
 				3C7484BC2062422A0076288A /* ViewController.swift */,
+				3C81832C2064D5DF0083AC80 /* ViewController2.swift */,
 				3C7484BE2062422A0076288A /* Main.storyboard */,
 				3C7484C12062422A0076288A /* Assets.xcassets */,
 				3C7484C32062422A0076288A /* LaunchScreen.storyboard */,
 				3C7484C62062422A0076288A /* Info.plist */,
 				3C7484CF2062447C0076288A /* CardCell.swift */,
+				3C81832A2064D25C0083AC80 /* MainViewController.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -154,6 +160,8 @@
 				3C7484BD2062422A0076288A /* ViewController.swift in Sources */,
 				3C7484BB2062422A0076288A /* AppDelegate.swift in Sources */,
 				3C7484D02062447C0076288A /* CardCell.swift in Sources */,
+				3C81832B2064D25C0083AC80 /* MainViewController.swift in Sources */,
+				3C81832D2064D5DF0083AC80 /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
