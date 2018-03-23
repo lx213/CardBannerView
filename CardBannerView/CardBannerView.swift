@@ -8,14 +8,14 @@
 
 import UIKit
 
-@objc protocol CardBannerDelegate{
+@objc public protocol CardBannerDelegate{
     /// 卡片点击事件
     @objc optional func CardClick(index: Int)
     /// 卡片初始化
     func CellForItem(cell: UICollectionViewCell, index: Int) -> UICollectionViewCell
 }
 
-class CardBannerView: UIView,UICollectionViewDataSource,UICollectionViewDelegate {
+open class CardBannerView: UIView,UICollectionViewDataSource,UICollectionViewDelegate {
     
     var datas = [Any]()
     let cellIde = "cell"
@@ -37,9 +37,9 @@ class CardBannerView: UIView,UICollectionViewDataSource,UICollectionViewDelegate
     var timeCount = 0
     var timer:Timer?
     /// 自动轮播时间，默认为2秒
-    var scrollTime = 2
+    public var scrollTime = 2
     /// 是否开启自动轮播
-    var isAutoScroll = false {
+    public var isAutoScroll = false {
         didSet{
             if isAutoScroll {
                 timeCount = 0
@@ -52,7 +52,7 @@ class CardBannerView: UIView,UICollectionViewDataSource,UICollectionViewDelegate
     }
     weak var delegate: CardBannerDelegate?
     
-    init(datas: [Any], itemW: CGFloat, itemH: CGFloat, LineSpacing: CGFloat, cellClass: AnyClass?, delegate: CardBannerDelegate ,iscycles: Bool ,istransform: Bool){
+    public init(datas: [Any], itemW: CGFloat, itemH: CGFloat, LineSpacing: CGFloat, cellClass: AnyClass?, delegate: CardBannerDelegate ,iscycles: Bool ,istransform: Bool){
         
         self.delegate = delegate
         self.itemH = itemH
@@ -95,15 +95,15 @@ class CardBannerView: UIView,UICollectionViewDataSource,UICollectionViewDelegate
         touchView.addGestureRecognizer(click)
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         delegate?.CardClick!(index: indexPath.row)
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return datas.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if delegate != nil {
             let cell = delegate!.CellForItem(cell: collectionView.dequeueReusableCell(withReuseIdentifier: cellIde, for: indexPath), index: getRealIndex(index: indexPath.row))
             return cell
@@ -119,7 +119,7 @@ class CardBannerView: UIView,UICollectionViewDataSource,UICollectionViewDelegate
         }
     }
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         collect.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
         if isCycles {
             /// 移动至中央的那一组数据
@@ -130,7 +130,7 @@ class CardBannerView: UIView,UICollectionViewDataSource,UICollectionViewDelegate
         touchView.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
     }
     
-    func setDatas(datas:[Any]) {
+    public func setDatas(datas:[Any]) {
         if isCycles {
             /// 扩展数据集至3倍
             for _ in 0..<3 {
@@ -219,7 +219,7 @@ class CardBannerView: UIView,UICollectionViewDataSource,UICollectionViewDelegate
         return index % dataCount
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
@@ -324,4 +324,5 @@ class CardLayout: UICollectionViewFlowLayout {
     
     
 }
+
 
